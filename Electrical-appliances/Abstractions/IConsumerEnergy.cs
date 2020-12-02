@@ -6,19 +6,14 @@
     public interface IConsumerEnergy
     {
         /// <summary>
-        /// Gets for height.
+        /// Gets for volume.
         /// </summary>
-        public double Height { get; }
+        public double Volume { get; }
 
         /// <summary>
-        /// Gets for length.
+        /// Gets for price.
         /// </summary>
-        public double Length { get;  }
-
-        /// <summary>
-        /// Gets for width.
-        /// </summary>
-        public double Width { get; }
+        public int Price { get; }
 
         /// <summary>
         /// Gets or sets for Power Consumption.
