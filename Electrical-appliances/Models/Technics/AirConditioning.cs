@@ -5,19 +5,19 @@
     using Electrical_appliances.Enums;
 
     /// <summary>
-    /// Class Fridge.
+    /// Class AirConditioning.
     /// </summary>
-    public class Fridge : Appliances
+    public class AirConditioning : Appliances
     {
         private bool isTurnOn;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Fridge"/> class.
+        /// Initializes a new instance of the <see cref="AirConditioning"/> class.
         /// </summary>
         /// <param name="price">price.</param>
         /// <param name="productionPlace"> Place of production.</param>
-        public Fridge(int price, Country productionPlace)
-        : base(2.3, price, productionPlace, 420, Devices.Fridge)
+        public AirConditioning(int price, Country productionPlace)
+        : base(0.8, price, productionPlace, 90, Devices.Fridge)
         {
             this.isTurnOn = false;
         }
@@ -32,7 +32,7 @@
         /// </summary>
         public override void Use()
         {
-            Console.WriteLine("I cool the products");
+            Console.WriteLine("I corrected the temperature");
         }
     }
 }
