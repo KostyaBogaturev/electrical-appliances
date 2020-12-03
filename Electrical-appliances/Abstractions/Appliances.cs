@@ -1,8 +1,5 @@
 ﻿namespace Electrical_appliances.Abstractions
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
     using Electrical_appliances.Enums;
 
     /// <summary>

@@ -1,8 +1,6 @@
 ﻿namespace Electrical_appliances.Services
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
     using Electrical_appliances.Abstractions;
     using Electrical_appliances.Enums;
     using Electrical_appliances.Models;

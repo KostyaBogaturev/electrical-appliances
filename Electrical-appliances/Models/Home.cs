@@ -1,8 +1,6 @@
 ﻿namespace Electrical_appliances.Models
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
     using Electrical_appliances.Abstractions;
     using Electrical_appliances.Enums;
     using Electrical_appliances.Heper;
@@ -97,17 +95,17 @@
         /// <returns>int counter.</returns>
         public int ConsumedEnergy()
         {
-            int counter = 0;
+            this.powerConsumption = 0;
 
             foreach (Appliances item in this.devices)
             {
                 if (item.IsTurnOn)
                 {
-                    counter += item.PowerConsumption;
+                    this.powerConsumption += item.PowerConsumption;
                 }
             }
 
-            return counter;
+            return this.powerConsumption;
         }
 
         /// <summary>
