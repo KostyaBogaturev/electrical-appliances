@@ -1,6 +1,7 @@
 ﻿namespace Electrical_appliances.Heper
 {
     using System;
+    using System.Collections;
     using Electrical_appliances.Abstractions;
     using Electrical_appliances.Enums;
     using Electrical_appliances.Helper;
@@ -8,7 +9,7 @@
     /// <summary>
     /// In this class i wanna creatre my custom collection.
     /// </summary>
-    public class CustomCollectioncs
+    public class CustomCollectioncs : IEnumerable
     {
         private Appliances[] array;
         private int fullness;
@@ -39,6 +40,15 @@
 
             this.array[this.fullness] = item;
             this.fullness++;
+        }
+
+        /// <summary>
+        /// Implemented interface.
+        /// </summary>
+        /// <returns>I dont know.</returns>
+        public IEnumerator GetEnumerator()
+        {
+            return this.array.GetEnumerator();
         }
 
         /// <summary>

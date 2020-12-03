@@ -17,7 +17,6 @@
         private readonly Country productionPlace;
 
         private int powerConsumption;
-        private int[] socets;
         private CustomCollectioncs devices;
 
         /// <summary>
@@ -26,30 +25,12 @@
         /// <param name="volume">volume of house.</param>
         /// <param name="price">price of house.</param>
         /// <param name="productionPlace">place of production of house.</param>
-        /// <param name="countOfSocets">count of socets at house.</param>
-        public Home(double volume, int price, Country productionPlace, int countOfSocets)
+        public Home(double volume, int price, Country productionPlace)
         {
             this.volume = volume;
             this.price = price;
             this.productionPlace = productionPlace;
             this.powerConsumption = 0;
-            this.socets = new int[countOfSocets];
-        }
-
-        /// <summary>
-        /// Gets or sets ASDASD.
-        /// </summary>
-        public int[] Socets
-        {
-            get
-            {
-                return this.socets;
-            }
-
-            set
-            {
-                this.socets = value;
-            }
         }
 
         /// <summary>
@@ -82,5 +63,50 @@
         /// Gets implement interface property place of production.
         /// </summary>
         public Country ProductionPlace => this.productionPlace;
+
+        /// <summary>
+        /// Find device in array.
+        /// </summary>
+        /// <param name="country">Country.</param>
+        /// <param name="device">type.</param>
+        public void FindDevice(Country country, Devices device)
+        {
+            try
+            {
+                this.devices.TryFind(country, device);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// Adding new item to devices.
+        /// </summary>
+        /// <param name="temp">name of appliances.</param>
+        public void Add(Appliances temp)
+        {
+            this.devices.Add(temp);
+        }
+
+        /// <summary>
+        /// Count the consumed energy in house.
+        /// </summary>
+        /// <returns>int counter.</returns>
+        public int ConsumedEnergy()
+        {
+            int counter = 0;
+
+            foreach (Appliances item in this.devices)
+            {
+                if (item.IsTurnOn)
+                {
+                    counter += item.PowerConsumption;
+                }
+            }
+
+            return counter;
+        }
     }
 }
