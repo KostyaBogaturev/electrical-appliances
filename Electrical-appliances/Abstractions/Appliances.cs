@@ -78,5 +78,14 @@
         /// This method return what make appliances which we use.
         /// </summary>
         public abstract void Use();
+
+        /// <summary>
+        /// Override ToString().
+        /// </summary>
+        /// <returns>string.</returns>
+        public override string ToString()
+        {
+            return $"{this.type} ({this.productionPlace}) price = {this.price:C}";
+        }
     }
 }
