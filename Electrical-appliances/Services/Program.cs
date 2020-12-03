@@ -1,6 +1,6 @@
 ﻿namespace Electrical_appliances
 {
-    using System;
+    using Electrical_appliances.Services;
 
     /// <summary>
     /// Start method for programm.
@@ -13,7 +13,7 @@
         /// <param name="args">args parametr.</param>
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Starter.Run();
         }
     }
 }

@@ -31,6 +31,7 @@
             this.price = price;
             this.productionPlace = productionPlace;
             this.powerConsumption = 0;
+            this.devices = new CustomCollectioncs(1);
         }
 
         /// <summary>
@@ -73,7 +74,7 @@
         {
             try
             {
-                this.devices.TryFind(country, device);
+                Console.WriteLine(this.devices.TryFind(country, device));
             }
             catch (Exception ex)
             {

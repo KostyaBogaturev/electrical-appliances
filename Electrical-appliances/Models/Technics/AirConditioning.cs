@@ -17,7 +17,7 @@
         /// <param name="price">price.</param>
         /// <param name="productionPlace"> Place of production.</param>
         public AirConditioning(int price, Country productionPlace)
-        : base(0.8, price, productionPlace, 90, Devices.Fridge)
+        : base(0.8, price, productionPlace, 90, Devices.AirConditioning)
         {
             this.isTurnOn = false;
         }
