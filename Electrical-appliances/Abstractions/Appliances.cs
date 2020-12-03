@@ -77,6 +77,6 @@
         /// <summary>
         /// This method return what make appliances which we use.
         /// </summary>
-        protected abstract void Use();
+        public abstract void Use();
     }
 }
