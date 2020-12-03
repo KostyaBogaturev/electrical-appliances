@@ -108,5 +108,16 @@
 
             return counter;
         }
+
+        /// <summary>
+        /// Output array of devices at home.
+        /// </summary>
+        public void Output()
+        {
+            foreach (var item in this.devices)
+            {
+                Console.WriteLine(item);
+            }
+        }
     }
 }
