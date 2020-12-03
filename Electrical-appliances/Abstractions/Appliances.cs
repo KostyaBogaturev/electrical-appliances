@@ -13,6 +13,7 @@
         private readonly double volume;
         private readonly int price;
         private readonly Country productionPlace;
+        private readonly Devices type;
         private readonly int powerConsumption;
 
         /// <summary>
@@ -22,12 +23,14 @@
         /// <param name="price">Price of appliances.</param>
         /// <param name="productionPlace">Place of prodaction of appliances.</param>
         /// <param name="powerConsumption">Consumption of power of appliances.</param>
-        public Appliances(double volume, int price, Country productionPlace, int powerConsumption)
+        /// <param name="type">Type of appliances.</param>
+        public Appliances(double volume, int price, Country productionPlace, int powerConsumption, Devices type)
         {
             this.volume = volume;
             this.price = price;
             this.productionPlace = productionPlace;
             this.powerConsumption = powerConsumption;
+            this.type = type;
         }
 
         /// <summary>
@@ -60,6 +63,11 @@
         /// Gets implement interface property place of production.
         /// </summary>
         public Country ProductionPlace => this.productionPlace;
+
+        /// <summary>
+        /// Gets type of device.
+        /// </summary>
+        public Devices Type => this.type;
 
         /// <summary>
         /// Gets or sets a value indicating whether is this appliances turn on.
