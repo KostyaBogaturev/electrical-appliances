@@ -5,6 +5,7 @@
     using System.Text;
     using Electrical_appliances.Abstractions;
     using Electrical_appliances.Enums;
+    using Electrical_appliances.Heper;
 
     /// <summary>
     /// Describe class home.
@@ -17,6 +18,7 @@
 
         private int powerConsumption;
         private int[] socets;
+        private CustomCollectioncs devices;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Home"/> class.

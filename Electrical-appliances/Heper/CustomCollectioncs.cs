@@ -1,8 +1,6 @@
 ﻿namespace Electrical_appliances.Heper
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
     using Electrical_appliances.Abstractions;
     using Electrical_appliances.Enums;
     using Electrical_appliances.Helper;
@@ -23,20 +21,6 @@
         {
             this.array = new Appliances[size];
             this.fullness = 0;
-        }
-
-        /// <summary>
-        /// This method resize array.
-        /// </summary>
-        /// <param name="size">size of array.</param>
-        public void Resize(int size)
-        {
-            if (size < 1)
-            {
-                return;
-            }
-
-            Array.Resize(ref this.array, size);
         }
 
         /// <summary>
