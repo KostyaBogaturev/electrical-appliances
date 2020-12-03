@@ -1,25 +1,23 @@
 ﻿namespace Electrical_appliances.Models.Technics
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
     using Electrical_appliances.Abstractions;
     using Electrical_appliances.Enums;
 
     /// <summary>
-    /// Class Kettle.
+    /// Class Washing Machine.
     /// </summary>
-    public class Kettle : Appliances
+    public class WashingMachine : Appliances
     {
         private bool isTurnOn;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Kettle"/> class.
+        /// Initializes a new instance of the <see cref="WashingMachine"/> class.
         /// </summary>
         /// <param name="price">price.</param>
         /// <param name="productionPlace"> Place of production.</param>
-        public Kettle(int price, Country productionPlace)
-        : base(0.0072, price, productionPlace, 12, Devices.Kettle)
+        public WashingMachine(int price, Country productionPlace)
+        : base(1.5, price, productionPlace, 220, Devices.WashingMachine)
         {
             this.isTurnOn = false;
         }
@@ -34,7 +32,7 @@
         /// </summary>
         public override void Use()
         {
-            Console.WriteLine("I boiled water");
+            Console.WriteLine("I washed a clothes");
         }
     }
 }
